@@ -59,8 +59,16 @@ export default function Home() {
         <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between">
             <h1 className="text-3xl font-bold text-primary">CinemaHub</h1>
-            <div className="text-sm text-muted-foreground">
-              Step {step === 'movies' ? 1 : step === 'sessions' ? 2 : step === 'seats' ? 3 : step === 'customer' ? 4 : 5} of 5
+            <div className="flex items-center gap-4">
+              <div className="text-sm text-muted-foreground">
+                Step {step === 'movies' ? 1 : step === 'sessions' ? 2 : step === 'seats' ? 3 : step === 'customer' ? 4 : 5} of 5
+              </div>
+              <div className="h-6 w-px bg-border" />
+              <nav className="flex items-center gap-4">
+                <a href="/login" className="text-sm text-muted-foreground hover:text-primary font-medium transition-colors">
+                  Login
+                </a>
+              </nav>
             </div>
           </div>
         </div>
